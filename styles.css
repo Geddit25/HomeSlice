@@ -1,0 +1,36 @@
+:root{
+  --bg:#fff7ef;
+  --accent:#d94f2f;
+  --muted:#6b6b6b;
+  --card:#fff;
+  --shadow: 0 6px 18px rgba(0,0,0,0.06);
+  --max-width:980px;
+}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222;margin:0}
+.site-header{background:linear-gradient(90deg,#fff 0%,#fff0ea 100%);padding:18px 20px;border-bottom:1px solid rgba(0,0,0,0.04)}
+.brand{display:flex;gap:12px;align-items:center;max-width:var(--max-width);margin:0 auto}
+.brand h1{font-size:20px;margin:0}
+.tag{max-width:var(--max-width);margin:6px auto 0;color:var(--muted);font-size:13px}
+.container{max-width:var(--max-width);margin:28px auto;padding:0 16px}
+.hero{background:var(--card);border-radius:10px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.hero h2{margin:0}
+.btn{background:transparent;border:1px solid var(--accent);padding:8px 12px;border-radius:8px;color:var(--accent);cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+.menu,.order,.history{margin-top:18px}
+.pizza-list{list-style:none;padding:0;margin:8px 0}
+.pizza-list li{background:var(--card);padding:10px;border-radius:8px;margin-bottom:8px;box-shadow:var(--shadow)}
+.order form{display:grid;grid-template-columns:1fr 120px;gap:12px;align-items:center}
+label{font-size:13px;color:var(--muted)}
+input,select{padding:8px;border-radius:8px;border:1px solid rgba(0,0,0,0.08)}
+.totals{grid-column:1 / -1;background:#fff;border-radius:8px;padding:10px;box-shadow:var(--shadow);display:flex;justify-content:space-between}
+.site-footer{text-align:center;padding:18px;color:var(--muted);font-size:13px}
+
+/* celebration confetti */
+.confetti{position:fixed;pointer-events:none;left:0;right:0;top:0;bottom:0;overflow:hidden}
+.confetti span{position:absolute;font-size:20px;animation:float 3s linear forwards}
+@keyframes float{0%{transform:translateY(-10vh) rotate(0) ;opacity:1}100%{transform:translateY(110vh) rotate(540deg);opacity:0}}
+
+@media(min-width:720px){
+  .order form{grid-template-columns:1fr 1fr 120px}
+}

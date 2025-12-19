@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>HomeSlice — Bitcoin Pizza Day</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">
+          <!-- simple pizza + BTC nod SVG -->
+          <svg width="48" height="48" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <circle cx="32" cy="32" r="30" fill="#FFD27F" />
+            <circle cx="24" cy="24" r="4" fill="#C63" />
+            <circle cx="38" cy="28" r="3" fill="#C63" />
+            <circle cx="30" cy="38" r="3" fill="#C63" />
+            <g transform="translate(40,8)">
+              <circle cx="8" cy="8" r="8" fill="#F7931A" />
+              <text x="8" y="12" font-size="10" font-weight="700" text-anchor="middle" fill="#fff">B</text>
+            </g>
+          </svg>
+        </div>
+        <h1>HomeSlice</h1>
+      </div>
+      <p class="tag">A tasteful nod to Bitcoin Pizza Day — May 22</p>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h2>Slice into history</h2>
+        <p>On May 22, 2010 someone paid 10,000 BTC for two pizzas. We celebrate with great slices.</p>
+        <button id="celebrateBtn" class="btn">Celebrate Bitcoin Pizza Day</button>
+      </section>
+
+      <section class="menu">
+        <h3>Menu</h3>
+        <ul id="menuList" class="pizza-list">
+          <li data-price="12">Margherita — $12</li>
+          <li data-price="15">Pepperoni — $15</li>
+          <li data-price="18">Truffle Mushroom — $18</li>
+          <li data-price="20">Prosciutto & Arugula — $20</li>
+        </ul>
+      </section>
+
+      <section class="order">
+        <h3>Place a (demo) order</h3>
+        <form id="orderForm">
+          <label for="pizza">Pizza</label>
+          <select id="pizza">
+            <option value="12">Margherita — $12</option>
+            <option value="15">Pepperoni — $15</option>
+            <option value="18">Truffle Mushroom — $18</option>
+            <option value="20">Prosciutto & Arugula — $20</option>
+          </select>
+
+          <label for="qty">Quantity</label>
+          <input id="qty" type="number" min="1" value="1" />
+
+          <label for="btcPrice">BTC price (USD)</label>
+          <input id="btcPrice" type="number" min="1" step="0.01" value="50000" />
+
+          <div class="totals">
+            <div>Subtotal: <span id="subtotal">$12.00</span></div>
+            <div>BTC total: <span id="btcTotal">0.00024 BTC</span></div>
+          </div>
+
+          <button type="button" id="calcBtn" class="btn primary">Calculate</button>
+        </form>
+      </section>
+
+      <section class="history">
+        <h3>About Bitcoin Pizza Day</h3>
+        <p>Bitcoin Pizza Day commemorates the first known purchase of goods (two pizzas) using Bitcoin on May 22, 2010 — 10,000 BTC.</p>
+        <p><a href="https://en.wikipedia.org/wiki/Bitcoin_pizza" target="_blank" rel="noopener">Learn more</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <small>Made with love and pepperoni. Not a real payment processor — demo only.</small>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
