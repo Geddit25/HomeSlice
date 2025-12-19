@@ -13,7 +13,13 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var
 .brand h1{font-size:20px;margin:0}
 .tag{max-width:var(--max-width);margin:6px auto 0;color:var(--muted);font-size:13px}
 .container{max-width:var(--max-width);margin:28px auto;padding:0 16px}
-.hero{background:var(--card);border-radius:10px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px}
+.hero{background:var(--card);border-radius:10px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.hero .hero-content{flex:1}
+.hero-art{width:100%;max-width:420px;border-radius:10px;box-shadow:var(--shadow);margin-top:12px;align-self:center}
+@media(min-width:720px){
+  .hero{flex-direction:row;gap:20px;align-items:center}
+  .hero-art{width:48%;max-width:none;margin-top:0}
+}
 .hero h2{margin:0}
 .btn{background:transparent;border:1px solid var(--accent);padding:8px 12px;border-radius:8px;color:var(--accent);cursor:pointer}
 .btn.primary{background:var(--accent);color:#fff;border-color:transparent}
